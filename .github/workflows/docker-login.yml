@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/your-repo:latest .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/codex-pipeline:latest .
 
       - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/your-repo:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/codex-pipeline:latest
